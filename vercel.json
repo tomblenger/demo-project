@@ -1,8 +1,9 @@
 {
+  "version": 2,
   "build": {
     "env": {
-      "NODE_VERSION": "20.219.3",
-      "PNPM_VERSION": "8.15.5"
+      "NODE_VERSION": "18"
     }
   }
 }
+  
