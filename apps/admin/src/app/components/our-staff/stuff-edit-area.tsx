@@ -18,7 +18,7 @@ const EditStaffArea = ({ id }: { id: string }) => {
     register,
     setRole,
     handleSubmit,
-    handleSubmitEditStuff,
+    handleSubmitEditProfile,
   } = useStaffSubmit();
   const handleChange = (value: string | number | undefined) => {
     setRole(value as string);
@@ -35,7 +35,7 @@ const EditStaffArea = ({ id }: { id: string }) => {
     content = (
       <div className="col-span-12 lg:col-span-4">
         <form
-          onSubmit={handleSubmit((data) => handleSubmitEditStuff(data, id))}
+          onSubmit={handleSubmit((data) => handleSubmitEditProfile(data, id))}
         >
           <div className="mb-6 bg-white px-8 py-8 rounded-md">
             {/* category image upload */}
