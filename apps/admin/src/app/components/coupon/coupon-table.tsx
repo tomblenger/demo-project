@@ -30,7 +30,7 @@ type IPropType = {
 };
 
 const CouponTable = ({cls,setOpenSidebar,searchValue}: IPropType) => {
-  const { data: coupons, isError, isLoading, error } = useGetAllCouponsQuery();
+  const { data: coupons, isError, isLoading, error } = useGetAllCouponsQuery(undefined);
   const paginationData = usePagination(coupons || [], 5);
   const { currentItems, handlePageClick, pageCount } = paginationData;
   // decide to render
