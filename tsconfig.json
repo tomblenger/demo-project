@@ -1,0 +1,38 @@
+{
+  "compilerOptions": {
+    "target": "ES2017",
+    "lib": ["dom", "dom.iterable", "es6"],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "noEmit": true,
+    "esModuleInterop": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "preserve",
+    "incremental": true,
+    "baseUrl": ".",
+    "paths": {
+      "@oakistni/db": ["packages/db"],
+      "@oakistni/db/*": ["packages/db/*"],
+      "@oakistni/utils": ["packages/utils"],
+      "@oakistni/utils/*": ["packages/utils/*"],
+      "@oakistni/admin/*": ["apps/admin/src/*"],
+      "@/*": ["apps/web/src/*"],
+      "@assets/*": ["apps/web/public/assets/*"],
+      "@layout/*": ["apps/web/src/layout/*"],
+      "@components/*": ["apps/web/src/components/*"],
+      "@admin/*": ["apps/web/app/admin/components/*"],
+      "@svg/*": ["apps/web/src/svg/*"],
+      "@hooks/*": ["apps/web/src/hooks/*"],
+      "@redux/*": ["apps/web/src/redux/*"],
+      "@ui/*": ["apps/web/src/ui/*"],
+      "@utils/*": ["apps/web/src/utils/*"]
+    }
+  },
+  "include": ["**/*.ts", "**/*.tsx", "**/*.js", "**/*.jsx"],
+  "exclude": ["node_modules"]
+} 

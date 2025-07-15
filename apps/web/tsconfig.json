@@ -1,0 +1,49 @@
+{
+  "extends": "../../tsconfig.json",
+  "compilerOptions": {
+    "target": "es5",
+    "lib": ["dom", "dom.iterable", "es6"],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strict": false,
+    "types": ["node", "next"],
+    "forceConsistentCasingInFileNames": true,
+    "noEmit": true,
+    "esModuleInterop": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "preserve",
+    "incremental": true,
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ],
+    "baseUrl": ".",
+    "paths": {
+      "@oakistni/db": ["../../packages/db"],
+      "@oakistni/db/*": ["../../packages/db/*"],
+      "@oakistni/utils": ["../../packages/utils"],
+      "@oakistni/utils/*": ["../../packages/utils/*"],
+      "@/*": ["./src/*"],
+      "@assets/*": ["./public/assets/*"],
+      "@admin/*": ["./app/admin/components/*"],
+      "@layout/*": ["./src/layout/*"],
+      "@components/*": ["./src/components/*"],
+      "@svg/*": ["./src/svg/*"],
+      "@hooks/*": ["./src/hooks/*"],
+      "@redux/*": ["./src/redux/*"],
+      "@ui/*": ["./src/ui/*"],
+      "@utils/*": ["./src/utils/*"]
+    }
+  },
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    ".next/types/**/*.ts"
+  ],
+  "exclude": ["node_modules"]
+}

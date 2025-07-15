@@ -1,0 +1,19 @@
+{
+  "name": "@oakistni/db",
+  "version": "1.0.0",
+  "private": true,
+  "main": "index.ts",
+  "types": "index.ts",
+  "dependencies": {
+    "mongoose": "^6.8.2",
+    "mongoose-sequence": "^5.3.1",
+    "validator": "^13.7.0"
+  },
+  "devDependencies": {
+    "@types/node": "20.2.5",
+    "typescript": "5.0.4"
+  },
+  "engines": {
+    "node": ">=18.x <=22.x"
+  }
+}

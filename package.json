@@ -1,0 +1,35 @@
+{
+  "name": "oakistni-mono",
+  "private": true,
+  "packageManager": "pnpm@10.6.5",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "turbo run dev --parallel",
+    "build": "turbo run build --filter=@oakistni/web",
+    "lint": "turbo run lint",
+    "start": "turbo run start",
+    "test:cloudinary": "node test-cloudinary.js",
+    "setup:cloudinary": "node setup-cloudinary-env.js",
+    "test:api": "node test-api-routes.js"
+  },
+  "devDependencies": {
+    "@types/node": "20.2.5",
+    "@types/react": "18.2.7",
+    "eslint": "8.41.0",
+    "turbo": "2.5.4",
+    "typescript": "5.0.4"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cloudinary": "^2.7.0",
+    "dotenv": "^17.2.0",
+    "mongoose": "^6.8.2",
+    "validator": "^13.7.0"
+  },
+  "engines": {
+    "node": ">=18.x <=22.x"
+  }
+}
