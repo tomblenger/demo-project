@@ -46,7 +46,7 @@ const CouponOffcanvas = ({ propsItems }: IPropType) => {
     setSelectProductType,
   } = propsItems;
 
-  const { data: categories, isLoading, isError } = useGetAllCategoriesQuery();
+  const { data: categories, isLoading, isError } = useGetAllCategoriesQuery(undefined);
   let content = null;
   if (isLoading) {
     content = <h4>Loading...</h4>;
