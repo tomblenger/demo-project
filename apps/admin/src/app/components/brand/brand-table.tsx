@@ -6,11 +6,12 @@ import Pagination from "../ui/Pagination";
 import { useGetAllBrandsQuery } from "@/redux/brand/brandApi";
 import BrandEditDelete from "./brand-edit-del";
 import usePagination from "@/hooks/use-pagination";
+import { Brand } from "@/types/brand-type";
 
 const BrandTables = () => {
 
-  const { data: brands, isError, isLoading } = useGetAllBrandsQuery();
-  const paginationData = usePagination(brands || [], 5);
+  const { data: brands = [], isError, isLoading } = useGetAllBrandsQuery(undefined);
+  const paginationData = usePagination(brands as Brand[], 5);
   const { currentItems, handlePageClick, pageCount } = paginationData;
   // decide what to render
   let content = null;
@@ -74,7 +75,7 @@ const BrandTables = () => {
                 </tr>
               </thead>
               <tbody>
-                {currentItems.map((item) => (
+                {currentItems.map((item: Brand) => (
                     <tr
                       key={item._id}
                       className="bg-white border-b border-gray6 last:border-0 text-start mx-9"
