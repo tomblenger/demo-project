@@ -6,10 +6,11 @@ import ErrorMsg from '../common/error-msg';
 import CategoryEditDelete from './edit-delete-category';
 import { useGetAllCategoriesQuery } from '@/redux/category/categoryApi';
 import usePagination from '@/hooks/use-pagination';
+import { ICategoryItem } from "@/types/category-type";
 
 const CategoryTables = () => {
-  const { data: categories, isError, isLoading } = useGetAllCategoriesQuery();
-  const paginationData = usePagination(categories || [], 5);
+  const { data: categories = [], isError, isLoading } = useGetAllCategoriesQuery(undefined);
+  const paginationData = usePagination(categories as ICategoryItem[], 5);
   const { currentItems, handlePageClick, pageCount } = paginationData;
   // decide what to render
   let content = null;
@@ -49,7 +50,7 @@ const CategoryTables = () => {
                 </tr>
               </thead>
               <tbody>
-                {currentItems.map(item => (
+                {currentItems.map((item: ICategoryItem) => (
                   <tr key={item._id} className="bg-white border-b border-gray6 last:border-0 text-start mx-9">
                     <td className="px-3 py-3 pl-0 font-normal text-[#55585B]">
                       #{item._id.slice(2, 10)}
