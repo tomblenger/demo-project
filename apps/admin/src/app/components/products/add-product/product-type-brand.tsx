@@ -31,7 +31,7 @@ const ProductTypeBrand = ({
   setSelectBrand,
   default_value,
 }: IPropType) => {
-  const { data: brands, isError, isLoading } = useGetAllBrandsQuery();
+  const { data: brands, isError, isLoading } = useGetAllBrandsQuery(undefined);
 
   const [hasDefaultValues, setHasDefaultValues] = useState<boolean>(false);
   // default value set
