@@ -9,7 +9,7 @@ import usePagination from "@/hooks/use-pagination";
 
 const BrandTables = () => {
 
-  const { data: brands, isError, isLoading } = useGetAllBrandsQuery(undefined);
+  const { data: brands, isError, isLoading } = useGetAllBrandsQuery();
   const paginationData = usePagination(brands || [], 5);
   const { currentItems, handlePageClick, pageCount } = paginationData;
   // decide what to render

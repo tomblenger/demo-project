@@ -166,6 +166,4 @@ const InvoicePrint = forwardRef<HTMLDivElement, IPropType>(({ orderData }, ref) 
   );
 });
 
-InvoicePrint.displayName = "InvoicePrint";
-
 export default InvoicePrint;
