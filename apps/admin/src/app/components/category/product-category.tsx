@@ -23,7 +23,7 @@ export default function ProductCategory({
   default_value,
 }: IPropType) {
   const [open, setOpen] = React.useState<string>("");
-  const { data: categories, isError, isLoading } = useGetAllCategoriesQuery();
+  const { data: categories, isError, isLoading } = useGetAllCategoriesQuery(undefined);
   const [selectedCategory, setSelectedCategory] = useState<string[]>(
     default_value ? [default_value.parent, default_value.children] : []
   );
